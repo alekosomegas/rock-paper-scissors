@@ -1,0 +1,56 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 33%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    margin-left: 18%;
+
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    margin-right: 2%;
+  }
+
+  .center {
+    right: 33%;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  img {
+    transform: scale(0.5);
+    height: 200px;
+  }
+
+  .flip {
+    transform: scale(-0.5, 0.5);
+  }
+
+  @keyframes wait123 {
+    0% {transform: translate(0px,0)};
+    50% {transform: translate(10px,10px)};
+    100% {transform: translate(0px,0)};
+  }
+
+  #computer-choice {
+    position: absolute;
+    animation-name: wait123;
+    animation-duration: 5s;
+  }
